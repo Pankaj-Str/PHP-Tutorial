@@ -22,3 +22,31 @@ echo "Your numerical grade is $grade, which corresponds to the letter grade $let
 
   
 ?>
+
+
+<?php 
+
+  $animal = "cat";
+
+switch ($animal) {
+    case "dog":
+        $category = "mammal";
+        break;
+    case "cat":
+        $category = "mammal";
+        break;
+    case "eagle":
+        $category = "bird";
+        break;
+    case "snake":
+        $category = "reptile";
+        break;
+    default:
+        $category = "unknown";
+}
+
+echo "The $animal is a $category.";
+
+
+
+?>
