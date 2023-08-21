@@ -86,3 +86,74 @@ There are several ways to create and manipulate arrays in PHP:
        array(7, 8, 9)
    );
    ```
+# PHP Sorting Arrays
+
+PHP provides a range of functions to sort arrays in different ways. You can sort both indexed (numeric) arrays and associative arrays based on their values or keys. Here are some common sorting functions in PHP:
+
+1. **Sorting Indexed Arrays by Values:**
+
+   ```php
+   $numericArray = array(10, 5, 30, 20);
+
+   // Ascending order
+   sort($numericArray);
+   // Result: [5, 10, 20, 30]
+
+   // Descending order
+   rsort($numericArray);
+   // Result: [30, 20, 10, 5]
+   ```
+
+2. **Sorting Associative Arrays by Values:**
+
+   ```php
+   $assocArray = array(
+       "apple" => 10,
+       "banana" => 5,
+       "cherry" => 30,
+       "date" => 20
+   );
+
+   // Ascending order by values
+   asort($assocArray);
+   // Result: ["banana" => 5, "apple" => 10, "date" => 20, "cherry" => 30]
+
+   // Descending order by values
+   arsort($assocArray);
+   // Result: ["cherry" => 30, "date" => 20, "apple" => 10, "banana" => 5]
+   ```
+
+3. **Sorting Associative Arrays by Keys:**
+
+   ```php
+   $assocArray = array(
+       "apple" => 10,
+       "banana" => 5,
+       "cherry" => 30,
+       "date" => 20
+   );
+
+   // Ascending order by keys
+   ksort($assocArray);
+   // Result: ["apple" => 10, "banana" => 5, "cherry" => 30, "date" => 20]
+
+   // Descending order by keys
+   krsort($assocArray);
+   // Result: ["date" => 20, "cherry" => 30, "banana" => 5, "apple" => 10]
+   ```
+
+4. **Custom Sorting:**
+   
+   You can also define your custom sorting criteria using the `usort()` function for indexed arrays and `uasort()` for associative arrays. These functions allow you to specify a comparison function.
+
+   ```php
+   $names = array("John", "Alice", "Bob");
+
+   // Custom sorting by string length
+   usort($names, function($a, $b) {
+       return strlen($a) - strlen($b);
+   });
+   // Result: ["Bob", "John", "Alice"]
+   ```
+
+These are just a few examples of the sorting functions available in PHP. Depending on your specific use case, you can choose the appropriate sorting function to organize your arrays in the desired order.
