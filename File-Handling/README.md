@@ -7,7 +7,7 @@ PHP provides a variety of functions for handling files, including reading from a
 ```php
 <?php
 // Open a file for reading
-$filename = "example.txt";
+$filename = "p4n.txt";
 $file = fopen($filename, "r");
 
 // Check if the file was opened successfully
@@ -32,7 +32,7 @@ In this example, we use `fopen` to open a file in read mode ("r"). Then, we use 
 ```php
 <?php
 // Open a file for writing (creates a new file or overwrites an existing one)
-$filename = "example.txt";
+$filename = "p4n.txt";
 $file = fopen($filename, "w");
 
 // Check if the file was opened successfully
@@ -59,7 +59,7 @@ If you want to append data to an existing file without overwriting its content, 
 ```php
 <?php
 // Open a file for appending (creates a new file or appends to an existing one)
-$filename = "example.txt";
+$filename = "p4n.txt";
 $file = fopen($filename, "a");
 
 // Check if the file was opened successfully
