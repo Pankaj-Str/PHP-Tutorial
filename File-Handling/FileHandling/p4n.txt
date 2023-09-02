@@ -1,0 +1,5 @@
+Hello, World!
+This is a PHP file handling example.
+www.codeswithpankaj.com
+
+@p4n.in -------- 
